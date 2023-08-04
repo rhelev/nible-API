@@ -26,6 +26,11 @@ def init_db():
     print("Database initialized and data loaded successfully.")
 
 
+@app.route("/")
+def view():
+    return "Hello, Flask is up and running!"
+
+
 if __name__ == "__main__":
     try:
         init_db()

@@ -45,9 +45,9 @@ def create_table(table_name):
     cur.execute(
         f"""
         CREATE TABLE IF NOT EXISTS {table_name} (
-            first_name TEXT,
-            last_name TEXT,
-            email TEXT
+            first_name TEXT NOT NULL,
+            last_name TEXT NOT NULL,
+            email TEXT UNIQUE NOT NULL
         );
     """
     )
