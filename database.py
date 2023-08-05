@@ -56,6 +56,16 @@ def create_table(table_name):
     conn.close()
 
 
+def drop_table(table_name):
+    # Creates the table with first_name, last_name, and email columns if it does not exist.
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute(f"DROP TABLE {table_name}")
+    conn.commit()
+    cur.close()
+    conn.close()
+
+
 def load_data_from_csv(table_name, path2csv):
     # Loads data from CSV file into the specified table in the database.
     with open(path2csv, "r") as f:
@@ -71,3 +81,8 @@ def load_data_from_csv(table_name, path2csv):
         conn.commit()
         cur.close()
         conn.close()
+
+
+if __name__ == "__main__":
+    # drop_table("test_table")
+    ...
