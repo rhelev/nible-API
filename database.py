@@ -1,15 +1,16 @@
 import csv
 import psycopg2
+from config import DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT
 
 
 def get_db_connection():
     # Establishes a connection to the PostgreSQL database.
     connection = psycopg2.connect(
-        dbname="postgres",
-        user="postgres",
-        password="mysecretpassword",
-        host="localhost",
-        port="5432",
+        dbname=DB_NAME,
+        user=DB_USER,
+        password=DB_PASSWORD,
+        host=DB_HOST,
+        port=DB_PORT,
     )
     return connection
 

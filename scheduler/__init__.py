@@ -16,7 +16,6 @@ celery.config_from_object(celeryconfig)
 
 @celery.task(name="update_contacts")
 def update_db():
-    print("Hello, Celery!")
     contacts_data = get_contacts_for_update(
         app.config["API_URL"], app.config["API_HEADERS"]
     )

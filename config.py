@@ -8,3 +8,11 @@ CELERY_RESULT_BACKEND = BROKER_URL
 API_URL = "https://api.nimble.com/api/v1/contacts/"
 API_KEY = "NxkA2RlXS3NiR8SKwRdDmroA992jgu"
 API_HEADERS = {"Authorization": f"Bearer {API_KEY}"}
+
+"""DB config"""
+TABLE_NAME = "contacts"
+DB_NAME = "postgres"
+DB_USER = "postgres"
+DB_PASSWORD = "mysecretpassword"
+DB_HOST = "localhost"
+DB_PORT = "5432"
